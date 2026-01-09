@@ -317,6 +317,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // PDF Resume Generation
     const downloadCVBtn = document.getElementById('downloadCV');
 
+    // PDF Download feature disabled for live site
+    /*
     if (downloadCVBtn) {
         downloadCVBtn.addEventListener('click', async function (e) {
             e.preventDefault();
@@ -360,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Education -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">EDUCATION</h2>
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">EDUCATION</h2>
                             <div style="margin-bottom: 10px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
@@ -385,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Core QA Skills -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CORE QA SKILLS</h2>
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CORE QA SKILLS</h2>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                                 <div>
                                     <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">🐛 Bug Database Management</h4>
@@ -470,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Work Experience -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">WORK EXPERIENCE</h2>
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">WORK EXPERIENCE</h2>
                             <div style="margin-bottom: 10px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
@@ -487,7 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Certifications -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CERTIFICATIONS</h2>
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CERTIFICATIONS</h2>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
                                     <div style="font-size: 13px; font-weight: 700; color: #000;">📊 Data Analytics Workshop</div>
@@ -545,6 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    */
 
     console.log('🚀 Portfolio loaded with enhanced animations and interactions!');
 });
