@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 // Create resume HTML content inline
                 const resumeHTML = `
-                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 210mm; margin: 0 auto; padding: 10mm 15mm; background: white; color: #000; line-height: 1.45;">
+                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 210mm; margin: 0; padding: 5mm 8mm; background: white; color: #000; line-height: 1.3;">
                         <!-- Header -->
                         <div style="text-align: center; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #2563eb;">
                             <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 6px; color: #000;">MUTHTAMIL ARASU E</h1>
@@ -348,8 +348,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Professional Summary -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROFESSIONAL SUMMARY</h2>
-                            <p style="font-size: 12px; line-height: 1.5; color: #000; text-align: justify;">
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROFESSIONAL SUMMARY</h2>
+                            <p style="font-size: 11px; line-height: 1.4; color: #000; text-align: justify;">
                                 Entry-level QA Engineer with a B.Sc in Computer Science (Cognitive Systems) and hands-on experience in manual testing, 
                                 test case design, and defect management. Passionate about ensuring software quality through meticulous attention to detail, 
                                 analytical thinking, and a strong foundation in SDLC/STLC. Experienced in building comprehensive testing frameworks, 
@@ -360,24 +360,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Education -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">EDUCATION</h2>
-                            <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">EDUCATION</h2>
+                            <div style="margin-bottom: 10px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
                                         <div style="font-size: 13px; font-weight: 700; color: #000;">B.Sc Computer Science (Cognitive Systems)</div>
                                         <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Karpagam Academy of Higher Education, Coimbatore</div>
                                     </div>
-                                    <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2024</div>
+                                    <div style="font-size: 12px; color: #000; font-weight: 600;">2024</div>
                                 </div>
                                 <div style="font-size: 11px; color: #000;">CGPA: 7.29/10</div>
                             </div>
-                            <div style="margin-bottom: 16px;">
+                            <div style="margin-bottom: 10px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
                                         <div style="font-size: 13px; font-weight: 700; color: #000;">Higher Secondary Certificate (HSC)</div>
                                         <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Sankar Ponnar Higher Secondary School, Palani</div>
                                     </div>
-                                    <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2021</div>
+                                    <div style="font-size: 12px; color: #000; font-weight: 600;">2021</div>
                                 </div>
                                 <div style="font-size: 11px; color: #000;">79% - State Board</div>
                             </div>
@@ -385,30 +385,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Core QA Skills -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CORE QA SKILLS</h2>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CORE QA SKILLS</h2>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                                 <div>
                                     <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">🐛 Bug Database Management</h4>
-                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Defect tracking, bug lifecycle management, comprehensive documentation</p>
+                                    <p style="font-size: 11px; color: #000; line-height: 1.5;">Defect tracking, bug lifecycle management, comprehensive documentation</p>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">📋 Test Management</h4>
-                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Test case design, execution, bug tracking using industry-standard tools</p>
+                                    <p style="font-size: 11px; color: #000; line-height: 1.5;">Test case design, execution, bug tracking using industry-standard tools</p>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">📊 System Specifications</h4>
-                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Requirements analysis, technical documentation, test scenario translation</p>
+                                    <p style="font-size: 11px; color: #000; line-height: 1.5;">Requirements analysis, technical documentation, test scenario translation</p>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">💻 Programming Knowledge</h4>
-                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Python, JavaScript, MySQL - Supporting automation and database testing</p>
+                                    <p style="font-size: 11px; color: #000; line-height: 1.5;">Python, JavaScript, MySQL - Supporting automation and database testing</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Technical Proficiencies -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">TECHNICAL PROFICIENCIES</h2>
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">TECHNICAL PROFICIENCIES</h2>
                             <p style="font-size: 13px; margin-bottom: 8px;"><strong>Testing:</strong> Manual Testing (90%), Test Case Design (85%), SQL/Database Testing (75%), Automation Testing (60%)</p>
                             <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                                 <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Selenium</span>
@@ -426,23 +426,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Project Experience -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROJECT EXPERIENCE</h2>
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROJECT EXPERIENCE</h2>
                             
                             <div style="margin-bottom: 18px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                                     <div style="font-size: 13px; font-weight: 700; color: #000;">Bug Tracker - Enterprise Defect Management System</div>
                                     <div style="font-size: 12px; color: #2563eb; font-weight: 600;">January 2026</div>
                                 </div>
-                                <p style="font-size: 13px; color: #4b5563; margin-bottom: 8px; line-height: 1.6;">
+                                <p style="font-size: 12px; color: #000; margin-bottom: 8px; line-height: 1.6;">
                                     Production-ready defect tracking and management platform for QA teams featuring role-based access control, 
                                     real-time analytics, and enterprise-grade security.
                                 </p>
                                 <ul style="list-style: none; padding-left: 0; margin-bottom: 8px;">
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Implemented comprehensive bug lifecycle management with detailed metadata tracking</li>
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Built role-based access control (Admin, Tester, Developer) with granular permissions</li>
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Developed real-time analytics dashboard using Chart.js for visualization</li>
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Implemented enterprise security: PBKDF2 hashing, XSS protection, AES-GCM encryption</li>
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Achieved 100% test coverage with Vitest (unit) and Playwright (E2E)</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Implemented comprehensive bug lifecycle management with detailed metadata tracking</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Built role-based access control (Admin, Tester, Developer) with granular permissions</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Developed real-time analytics dashboard using Chart.js for visualization</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Implemented enterprise security: PBKDF2 hashing, XSS protection, AES-GCM encryption</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Achieved 100% test coverage with Vitest (unit) and Playwright (E2E)</li>
                                 </ul>
                                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
                                     <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px;">JavaScript</span>
@@ -458,28 +458,28 @@ document.addEventListener('DOMContentLoaded', function () {
                                     <div style="font-size: 13px; font-weight: 700; color: #000;">Young Entrepreneur E-Negosyo System</div>
                                     <div style="font-size: 12px; color: #2563eb; font-weight: 600;">March 2024</div>
                                 </div>
-                                <p style="font-size: 13px; color: #4b5563; margin-bottom: 8px;">
+                                <p style="font-size: 12px; color: #000; margin-bottom: 8px;">
                                     Full-stack e-commerce system for young entrepreneurs with comprehensive UI testing and debugging.
                                 </p>
                                 <ul style="list-style: none; padding-left: 0;">
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Developed product listings and order workflow features</li>
-                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Performed comprehensive debugging and testing</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Developed product listings and order workflow features</li>
+                                    <li style="font-size: 11px; color: #000; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Performed comprehensive debugging and testing</li>
                                 </ul>
                             </div>
                         </div>
 
                         <!-- Work Experience -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">WORK EXPERIENCE</h2>
-                            <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">WORK EXPERIENCE</h2>
+                            <div style="margin-bottom: 10px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
                                         <div style="font-size: 13px; font-weight: 700; color: #000;">Junior Web Developer Intern</div>
                                         <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Internship</div>
                                     </div>
-                                    <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2023</div>
+                                    <div style="font-size: 12px; color: #000; font-weight: 600;">2023</div>
                                 </div>
-                                <div style="font-size: 13px; color: #6b7280; line-height: 1.5;">
+                                <div style="font-size: 11px; color: #000; line-height: 1.4;">
                                     Assisted in UI development and debugging. Strengthened QA mindset through developer collaboration.
                                 </div>
                             </div>
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         <!-- Certifications -->
                         <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CERTIFICATIONS</h2>
+                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CERTIFICATIONS</h2>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
                                     <div style="font-size: 13px; font-weight: 700; color: #000;">📊 Data Analytics Workshop</div>
@@ -507,22 +507,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 tempDiv.innerHTML = resumeHTML;
                 const resumeElement = tempDiv.querySelector('#resume-content');
 
-                // Configure PDF options
+                // Configure PDF options - minimal margins
                 const opt = {
-                    margin: 0,
+                    margin: [5, 8, 5, 8],  // top, left, bottom, right in mm
                     filename: 'Muthtamil_Arasu_E_QA_Engineer_Resume.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
+                    image: { type: 'jpeg', quality: 0.95 },
                     html2canvas: {
                         scale: 2,
                         useCORS: true,
-                        letterRendering: true
+                        letterRendering: true,
+                        backgroundColor: '#ffffff'
                     },
                     jsPDF: {
                         unit: 'mm',
                         format: 'a4',
                         orientation: 'portrait',
                         compress: true
-                    }
+                    },
+                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
                 };
 
                 // Generate PDF
