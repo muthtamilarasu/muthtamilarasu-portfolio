@@ -329,27 +329,27 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 // Create resume HTML content inline
                 const resumeHTML = `
-                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 210mm; margin: 0; padding: 5mm 8mm; background: white; color: #000; line-height: 1.3;">
+                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 100%; margin: 0; padding: 0; background: white; color: #000; line-height: 1.2;">
                         <!-- Header -->
-                        <div style="text-align: center; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #2563eb;">
-                            <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 6px; color: #000;">MUTHTAMIL ARASU E</h1>
-                            <div style="font-size: 18px; font-weight: 600; color: #2563eb; margin-bottom: 10px;">Quality Assurance Engineer</div>
-                            <div style="font-size: 12px; color: #000; margin-bottom: 6px;">
-                                📧 muthtamilarasu898@gmail.com | 📱 +91 91592 16698 | 📍 Palani, Tamil Nadu, India
+                        <div style="text-align: center; margin-bottom: 8px; padding: 8px 0; border-bottom: 2px solid #2563eb;">
+                            <h1 style="font-size: 24px; font-weight: 900; margin: 0 0 4px 0; color: #000;">MUTHTAMIL ARASU E</h1>
+                            <div style="font-size: 14px; font-weight: 700; color: #2563eb; margin-bottom: 4px;">Quality Assurance Engineer</div>
+                            <div style="font-size: 10px; color: #000; font-weight: 600; margin-bottom: 4px;">
+                                muthtamilarasu898@gmail.com | +91 91592 16698 | Palani, Tamil Nadu
                             </div>
-                            <div style="font-size: 13px; color: #2563eb;">
+                            <div style="font-size: 10px; color: #2563eb; font-weight: 600; margin-bottom: 4px;">
                                 GitHub: muthtamilarasu | LinkedIn: muthtamil-arasu-e | Portfolio: muthtamilarasu.in
                             </div>
-                            <div style="margin-top: 12px;">
-                                <span style="display: inline-block; padding: 6px 14px; background: #dcfce7; color: #16a34a; font-size: 12px; font-weight: 600; border-radius: 20px; border: 1.5px solid #16a34a; margin: 0 6px;">✅ Open to Work</span>
-                                <span style="display: inline-block; padding: 6px 14px; background: #dcfce7; color: #16a34a; font-size: 12px; font-weight: 600; border-radius: 20px; border: 1.5px solid #16a34a; margin: 0 6px;">✅ Open to Internship</span>
+                            <div style="margin-top: 4px;">
+                                <span style="display: inline-block; padding: 3px 8px; background: #dcfce7; color: #16a34a; font-size: 9px; font-weight: 700; border-radius: 10px; border: 1px solid #16a34a; margin: 0 3px;">Open to Work</span>
+                                <span style="display: inline-block; padding: 3px 8px; background: #dcfce7; color: #16a34a; font-size: 9px; font-weight: 700; border-radius: 10px; border: 1px solid #16a34a; margin: 0 3px;">Open to Internship</span>
                             </div>
                         </div>
 
                         <!-- Professional Summary -->
-                        <div style="margin-bottom: 16px;">
-                            <h2 style="font-size: 14px; font-weight: 700; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROFESSIONAL SUMMARY</h2>
-                            <p style="font-size: 11px; line-height: 1.4; color: #000; text-align: justify;">
+                        <div style="margin-bottom: 8px;">
+                            <h2 style="font-size: 12px; font-weight: 900; margin: 0 0 4px 0; padding-bottom: 2px; border-bottom: 1px solid #000; text-transform: uppercase; letter-spacing: 0.3px; color: #000;">PROFESSIONAL SUMMARY</h2>
+                            <p style="font-size: 10px; line-height: 1.3; color: #000; font-weight: 600; text-align: justify; margin: 0;">
                                 Entry-level QA Engineer with a B.Sc in Computer Science (Cognitive Systems) and hands-on experience in manual testing, 
                                 test case design, and defect management. Passionate about ensuring software quality through meticulous attention to detail, 
                                 analytical thinking, and a strong foundation in SDLC/STLC. Experienced in building comprehensive testing frameworks, 
