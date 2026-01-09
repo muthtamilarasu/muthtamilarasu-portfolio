@@ -329,12 +329,12 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 // Create resume HTML content inline
                 const resumeHTML = `
-                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 210mm; margin: 0 auto; padding: 20mm; background: white; color: #1a1a1a; line-height: 1.6;">
+                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 210mm; margin: 0 auto; padding: 10mm 15mm; background: white; color: #000; line-height: 1.45;">
                         <!-- Header -->
-                        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #2563eb;">
-                            <h1 style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">MUTHTAMIL ARASU E</h1>
-                            <div style="font-size: 20px; font-weight: 600; color: #2563eb; margin-bottom: 12px;">Quality Assurance Engineer</div>
-                            <div style="font-size: 13px; color: #666; margin-bottom: 8px;">
+                        <div style="text-align: center; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #2563eb;">
+                            <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 6px; color: #000;">MUTHTAMIL ARASU E</h1>
+                            <div style="font-size: 18px; font-weight: 600; color: #2563eb; margin-bottom: 10px;">Quality Assurance Engineer</div>
+                            <div style="font-size: 12px; color: #000; margin-bottom: 6px;">
                                 📧 muthtamilarasu898@gmail.com | 📱 +91 91592 16698 | 📍 Palani, Tamil Nadu, India
                             </div>
                             <div style="font-size: 13px; color: #2563eb;">
@@ -347,9 +347,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
 
                         <!-- Professional Summary -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">PROFESSIONAL SUMMARY</h2>
-                            <p style="font-size: 14px; line-height: 1.7; color: #4b5563; text-align: justify;">
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROFESSIONAL SUMMARY</h2>
+                            <p style="font-size: 12px; line-height: 1.5; color: #000; text-align: justify;">
                                 Entry-level QA Engineer with a B.Sc in Computer Science (Cognitive Systems) and hands-on experience in manual testing, 
                                 test case design, and defect management. Passionate about ensuring software quality through meticulous attention to detail, 
                                 analytical thinking, and a strong foundation in SDLC/STLC. Experienced in building comprehensive testing frameworks, 
@@ -359,33 +359,33 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
 
                         <!-- Education -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">EDUCATION</h2>
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">EDUCATION</h2>
                             <div style="margin-bottom: 16px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
-                                        <div style="font-size: 15px; font-weight: 700;">B.Sc Computer Science (Cognitive Systems)</div>
+                                        <div style="font-size: 13px; font-weight: 700; color: #000;">B.Sc Computer Science (Cognitive Systems)</div>
                                         <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Karpagam Academy of Higher Education, Coimbatore</div>
                                     </div>
                                     <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2024</div>
                                 </div>
-                                <div style="font-size: 13px; color: #6b7280;">CGPA: 7.29/10</div>
+                                <div style="font-size: 11px; color: #000;">CGPA: 7.29/10</div>
                             </div>
                             <div style="margin-bottom: 16px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
-                                        <div style="font-size: 15px; font-weight: 700;">Higher Secondary Certificate (HSC)</div>
+                                        <div style="font-size: 13px; font-weight: 700; color: #000;">Higher Secondary Certificate (HSC)</div>
                                         <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Sankar Ponnar Higher Secondary School, Palani</div>
                                     </div>
                                     <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2021</div>
                                 </div>
-                                <div style="font-size: 13px; color: #6b7280;">79% - State Board</div>
+                                <div style="font-size: 11px; color: #000;">79% - State Board</div>
                             </div>
                         </div>
 
                         <!-- Core QA Skills -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">CORE QA SKILLS</h2>
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CORE QA SKILLS</h2>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                                 <div>
                                     <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">🐛 Bug Database Management</h4>
@@ -407,8 +407,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
 
                         <!-- Technical Proficiencies -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">TECHNICAL PROFICIENCIES</h2>
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">TECHNICAL PROFICIENCIES</h2>
                             <p style="font-size: 13px; margin-bottom: 8px;"><strong>Testing:</strong> Manual Testing (90%), Test Case Design (85%), SQL/Database Testing (75%), Automation Testing (60%)</p>
                             <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                                 <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Selenium</span>
@@ -425,12 +425,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
 
                         <!-- Project Experience -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">PROJECT EXPERIENCE</h2>
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">PROJECT EXPERIENCE</h2>
                             
                             <div style="margin-bottom: 18px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                    <div style="font-size: 15px; font-weight: 700;">Bug Tracker - Enterprise Defect Management System</div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #000;">Bug Tracker - Enterprise Defect Management System</div>
                                     <div style="font-size: 12px; color: #2563eb; font-weight: 600;">January 2026</div>
                                 </div>
                                 <p style="font-size: 13px; color: #4b5563; margin-bottom: 8px; line-height: 1.6;">
@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                             <div style="margin-bottom: 18px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                    <div style="font-size: 15px; font-weight: 700;">Young Entrepreneur E-Negosyo System</div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #000;">Young Entrepreneur E-Negosyo System</div>
                                     <div style="font-size: 12px; color: #2563eb; font-weight: 600;">March 2024</div>
                                 </div>
                                 <p style="font-size: 13px; color: #4b5563; margin-bottom: 8px;">
@@ -469,12 +469,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
 
                         <!-- Work Experience -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">WORK EXPERIENCE</h2>
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">WORK EXPERIENCE</h2>
                             <div style="margin-bottom: 16px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
                                     <div>
-                                        <div style="font-size: 15px; font-weight: 700;">Junior Web Developer Intern</div>
+                                        <div style="font-size: 13px; font-weight: 700; color: #000;">Junior Web Developer Intern</div>
                                         <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Internship</div>
                                     </div>
                                     <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2023</div>
@@ -486,15 +486,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
 
                         <!-- Certifications -->
-                        <div style="margin-bottom: 28px;">
-                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">CERTIFICATIONS</h2>
+                        <div style="margin-bottom: 16px;">
+                            <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">CERTIFICATIONS</h2>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
-                                    <div style="font-size: 15px; font-weight: 700;">📊 Data Analytics Workshop</div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #000;">📊 Data Analytics Workshop</div>
                                     <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Jobaaj Learnings</div>
                                 </div>
                                 <div>
-                                    <div style="font-size: 15px; font-weight: 700;">💾 SQL Workshop</div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #000;">💾 SQL Workshop</div>
                                     <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Newton School</div>
                                 </div>
                             </div>
