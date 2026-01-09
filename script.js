@@ -188,8 +188,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            // Skip empty hashes or just '#'
+            if (!href || href === '#' || href.length <= 1) {
+                return;
+            }
+
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -307,6 +313,236 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     `;
     document.head.appendChild(style);
+
+    // PDF Resume Generation
+    const downloadCVBtn = document.getElementById('downloadCV');
+
+    if (downloadCVBtn) {
+        downloadCVBtn.addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            // Show loading state
+            const originalText = this.querySelector('.btn-text').textContent;
+            this.querySelector('.btn-text').textContent = 'Generating PDF...';
+            this.style.pointerEvents = 'none';
+
+            try {
+                // Create resume HTML content inline
+                const resumeHTML = `
+                    <div id="resume-content" style="font-family: 'Inter', -apple-system, sans-serif; max-width: 210mm; margin: 0 auto; padding: 20mm; background: white; color: #1a1a1a; line-height: 1.6;">
+                        <!-- Header -->
+                        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #2563eb;">
+                            <h1 style="font-size: 36px; font-weight: 700; margin-bottom: 8px;">MUTHTAMIL ARASU E</h1>
+                            <div style="font-size: 20px; font-weight: 600; color: #2563eb; margin-bottom: 12px;">Quality Assurance Engineer</div>
+                            <div style="font-size: 13px; color: #666; margin-bottom: 8px;">
+                                📧 muthtamilarasu898@gmail.com | 📱 +91 91592 16698 | 📍 Palani, Tamil Nadu, India
+                            </div>
+                            <div style="font-size: 13px; color: #2563eb;">
+                                GitHub: muthtamilarasu | LinkedIn: muthtamil-arasu-e | Portfolio: muthtamilarasu.in
+                            </div>
+                            <div style="margin-top: 12px;">
+                                <span style="display: inline-block; padding: 6px 14px; background: #dcfce7; color: #16a34a; font-size: 12px; font-weight: 600; border-radius: 20px; border: 1.5px solid #16a34a; margin: 0 6px;">✅ Open to Work</span>
+                                <span style="display: inline-block; padding: 6px 14px; background: #dcfce7; color: #16a34a; font-size: 12px; font-weight: 600; border-radius: 20px; border: 1.5px solid #16a34a; margin: 0 6px;">✅ Open to Internship</span>
+                            </div>
+                        </div>
+
+                        <!-- Professional Summary -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">PROFESSIONAL SUMMARY</h2>
+                            <p style="font-size: 14px; line-height: 1.7; color: #4b5563; text-align: justify;">
+                                Entry-level QA Engineer with a B.Sc in Computer Science (Cognitive Systems) and hands-on experience in manual testing, 
+                                test case design, and defect management. Passionate about ensuring software quality through meticulous attention to detail, 
+                                analytical thinking, and a strong foundation in SDLC/STLC. Experienced in building comprehensive testing frameworks, 
+                                managing bug databases, and developing production-ready QA tools. Ready to contribute to high-quality product delivery 
+                                and grow into automation testing.
+                            </p>
+                        </div>
+
+                        <!-- Education -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">EDUCATION</h2>
+                            <div style="margin-bottom: 16px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                    <div>
+                                        <div style="font-size: 15px; font-weight: 700;">B.Sc Computer Science (Cognitive Systems)</div>
+                                        <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Karpagam Academy of Higher Education, Coimbatore</div>
+                                    </div>
+                                    <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2024</div>
+                                </div>
+                                <div style="font-size: 13px; color: #6b7280;">CGPA: 7.29/10</div>
+                            </div>
+                            <div style="margin-bottom: 16px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                    <div>
+                                        <div style="font-size: 15px; font-weight: 700;">Higher Secondary Certificate (HSC)</div>
+                                        <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Sankar Ponnar Higher Secondary School, Palani</div>
+                                    </div>
+                                    <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2021</div>
+                                </div>
+                                <div style="font-size: 13px; color: #6b7280;">79% - State Board</div>
+                            </div>
+                        </div>
+
+                        <!-- Core QA Skills -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">CORE QA SKILLS</h2>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div>
+                                    <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">🐛 Bug Database Management</h4>
+                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Defect tracking, bug lifecycle management, comprehensive documentation</p>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">📋 Test Management</h4>
+                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Test case design, execution, bug tracking using industry-standard tools</p>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">📊 System Specifications</h4>
+                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Requirements analysis, technical documentation, test scenario translation</p>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">💻 Programming Knowledge</h4>
+                                    <p style="font-size: 13px; color: #6b7280; line-height: 1.5;">Python, JavaScript, MySQL - Supporting automation and database testing</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Proficiencies -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">TECHNICAL PROFICIENCIES</h2>
+                            <p style="font-size: 13px; margin-bottom: 8px;"><strong>Testing:</strong> Manual Testing (90%), Test Case Design (85%), SQL/Database Testing (75%), Automation Testing (60%)</p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Selenium</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Python</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">JavaScript</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">MySQL</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Jira</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Git</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">VS Code</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Vitest</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Playwright</span>
+                                <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px; border: 1px solid #bfdbfe;">Docker</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Experience -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">PROJECT EXPERIENCE</h2>
+                            
+                            <div style="margin-bottom: 18px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <div style="font-size: 15px; font-weight: 700;">Bug Tracker - Enterprise Defect Management System</div>
+                                    <div style="font-size: 12px; color: #2563eb; font-weight: 600;">January 2026</div>
+                                </div>
+                                <p style="font-size: 13px; color: #4b5563; margin-bottom: 8px; line-height: 1.6;">
+                                    Production-ready defect tracking and management platform for QA teams featuring role-based access control, 
+                                    real-time analytics, and enterprise-grade security.
+                                </p>
+                                <ul style="list-style: none; padding-left: 0; margin-bottom: 8px;">
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Implemented comprehensive bug lifecycle management with detailed metadata tracking</li>
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Built role-based access control (Admin, Tester, Developer) with granular permissions</li>
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Developed real-time analytics dashboard using Chart.js for visualization</li>
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Implemented enterprise security: PBKDF2 hashing, XSS protection, AES-GCM encryption</li>
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Achieved 100% test coverage with Vitest (unit) and Playwright (E2E)</li>
+                                </ul>
+                                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                                    <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px;">JavaScript</span>
+                                    <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px;">Vite</span>
+                                    <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px;">SQL.js</span>
+                                    <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px;">Vitest</span>
+                                    <span style="padding: 4px 10px; background: #eff6ff; color: #2563eb; font-size: 11px; font-weight: 600; border-radius: 4px;">Playwright</span>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 18px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <div style="font-size: 15px; font-weight: 700;">Young Entrepreneur E-Negosyo System</div>
+                                    <div style="font-size: 12px; color: #2563eb; font-weight: 600;">March 2024</div>
+                                </div>
+                                <p style="font-size: 13px; color: #4b5563; margin-bottom: 8px;">
+                                    Full-stack e-commerce system for young entrepreneurs with comprehensive UI testing and debugging.
+                                </p>
+                                <ul style="list-style: none; padding-left: 0;">
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Developed product listings and order workflow features</li>
+                                    <li style="font-size: 12px; color: #6b7280; padding-left: 16px; position: relative; margin-bottom: 4px;">→ Performed comprehensive debugging and testing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Work Experience -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">WORK EXPERIENCE</h2>
+                            <div style="margin-bottom: 16px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                    <div>
+                                        <div style="font-size: 15px; font-weight: 700;">Junior Web Developer Intern</div>
+                                        <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Internship</div>
+                                    </div>
+                                    <div style="font-size: 12px; color: #6b7280; font-weight: 600;">2023</div>
+                                </div>
+                                <div style="font-size: 13px; color: #6b7280; line-height: 1.5;">
+                                    Assisted in UI development and debugging. Strengthened QA mindset through developer collaboration.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div style="margin-bottom: 28px;">
+                            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.5px;">CERTIFICATIONS</h2>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700;">📊 Data Analytics Workshop</div>
+                                    <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Jobaaj Learnings</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700;">💾 SQL Workshop</div>
+                                    <div style="font-size: 13px; color: #2563eb; font-weight: 600;">Newton School</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Create a temporary container
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = resumeHTML;
+                const resumeElement = tempDiv.querySelector('#resume-content');
+
+                // Configure PDF options
+                const opt = {
+                    margin: 0,
+                    filename: 'Muthtamil_Arasu_E_QA_Engineer_Resume.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: {
+                        scale: 2,
+                        useCORS: true,
+                        letterRendering: true
+                    },
+                    jsPDF: {
+                        unit: 'mm',
+                        format: 'a4',
+                        orientation: 'portrait',
+                        compress: true
+                    }
+                };
+
+                // Generate PDF
+                await html2pdf().set(opt).from(resumeElement).save();
+
+                // Reset button state
+                this.querySelector('.btn-text').textContent = originalText;
+                this.style.pointerEvents = 'auto';
+
+                console.log('✅ Resume PDF generated successfully!');
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('Sorry, there was an error generating the PDF. Please try again.');
+
+                // Reset button state
+                this.querySelector('.btn-text').textContent = originalText;
+                this.style.pointerEvents = 'auto';
+            }
+        });
+    }
 
     console.log('🚀 Portfolio loaded with enhanced animations and interactions!');
 });

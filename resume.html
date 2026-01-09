@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muthtamil Arasu E - QA Engineer Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .resume-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+
+        /* Header */
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2563eb;
+        }
+
+        .resume-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .resume-header .title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Status Badges */
+        .status-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #dcfce7;
+            color: #16a34a;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+            border: 1.5px solid #16a34a;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 14px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e5e7eb;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Profile */
+        .profile-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .skill-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .skill-item p {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tech-tag {
+            padding: 4px 10px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .project-date {
+            font-size: 12px;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .project-points {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-points li {
+            font-size: 12px;
+            color: #6b7280;
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        .project-points li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .experience-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .experience-org {
+            font-size: 13px;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .experience-year {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .experience-desc {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .resume-container {
+                max-width: 100%;
+                padding: 15mm;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container" id="resume">
+        <!-- Header -->
+        <div class="resume-header">
+            <h1>MUTHTAMIL ARASU E</h1>
+            <div class="title">Quality Assurance Engineer</div>
+            <div class="contact-info">
+                <span>📧 muthtamilarasu898@gmail.com</span>
+                <span>📱 +91 91592 16698</span>
+                <span>📍 Palani, Tamil Nadu, India</span>
+            </div>
+            <div class="contact-info">
+                <a href="https://github.com/muthtamilarasu" target="_blank">GitHub: muthtamilarasu</a>
+                <span>|</span>
+                <a href="https://www.linkedin.com/in/muthtamil-arasu-e-38054b254/" target="_blank">LinkedIn:
+                    muthtamil-arasu-e</a>
+                <span>|</span>
+                <a href="https://muthtamilarasu.in" target="_blank">Portfolio: muthtamilarasu.in</a>
+            </div>
+            <div class="status-badges">
+                <span class="badge">✅ Open to Work</span>
+                <span class="badge">✅ Open to Internship</span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="profile-text">
+                Entry-level QA Engineer with a B.Sc in Computer Science (Cognitive Systems) and hands-on experience in
+                manual testing,
+                test case design, and defect management. Passionate about ensuring software quality through meticulous
+                attention to detail,
+                analytical thinking, and a strong foundation in SDLC/STLC. Experienced in building comprehensive testing
+                frameworks,
+                managing bug databases, and developing production-ready QA tools. Ready to contribute to high-quality
+                product delivery
+                and grow into automation testing.
+            </p>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">B.Sc Computer Science (Cognitive Systems)</div>
+                        <div class="experience-org">Karpagam Academy of Higher Education, Coimbatore</div>
+                    </div>
+                    <div class="experience-year">2024</div>
+                </div>
+                <div class="experience-desc">CGPA: 7.29/10</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Higher Secondary Certificate (HSC)</div>
+                        <div class="experience-org">Sankar Ponnar Higher Secondary School, Palani</div>
+                    </div>
+                    <div class="experience-year">2021</div>
+                </div>
+                <div class="experience-desc">79% - State Board</div>
+            </div>
+        </div>
+
+        <!-- Core QA Skills -->
+        <div class="section">
+            <h2 class="section-title">Core QA Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>🐛 Bug Database Management</h4>
+                    <p>Defect tracking, bug lifecycle management, comprehensive documentation</p>
+                </div>
+                <div class="skill-item">
+                    <h4>📋 Test Management</h4>
+                    <p>Test case design, execution, bug tracking using industry-standard tools</p>
+                </div>
+                <div class="skill-item">
+                    <h4>📊 System Specifications</h4>
+                    <p>Requirements analysis, technical documentation, test scenario translation</p>
+                </div>
+                <div class="skill-item">
+                    <h4>💻 Programming Knowledge</h4>
+                    <p>Python, JavaScript, MySQL - Supporting automation and database testing</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Proficiencies -->
+        <div class="section">
+            <h2 class="section-title">Technical Proficiencies</h2>
+            <div>
+                <p style="font-size: 13px; margin-bottom: 8px;"><strong>Testing:</strong> Manual Testing (90%), Test
+                    Case Design (85%), SQL/Database Testing (75%), Automation Testing (60%)</p>
+                <div class="tech-list">
+                    <span class="tech-tag">Selenium</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Jira</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">VS Code</span>
+                    <span class="tech-tag">Vitest</span>
+                    <span class="tech-tag">Playwright</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Experience -->
+        <div class="section">
+            <h2 class="section-title">Project Experience</h2>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Bug Tracker - Enterprise Defect Management System</div>
+                    <div class="project-date">January 2026</div>
+                </div>
+                <div class="project-desc">
+                    Production-ready defect tracking and management platform for QA teams featuring role-based access
+                    control,
+                    real-time analytics, and enterprise-grade security.
+                </div>
+                <ul class="project-points">
+                    <li>Implemented comprehensive bug lifecycle management with detailed metadata tracking</li>
+                    <li>Built role-based access control (Admin, Tester, Developer) with granular permissions</li>
+                    <li>Developed real-time analytics dashboard using Chart.js for bug statistics visualization</li>
+                    <li>Integrated advanced search with Fuse.js and filtering by status, severity, and priority</li>
+                    <li>Implemented enterprise security: PBKDF2 hashing, XSS protection, AES-GCM encryption</li>
+                    <li>Achieved 100% test coverage with Vitest (unit) and Playwright (E2E)</li>
+                    <li>Set up CI/CD pipeline with GitHub Actions and Docker deployment</li>
+                </ul>
+                <div class="tech-list">
+                    <span class="tech-tag">JavaScript (ES6+)</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">SQL.js</span>
+                    <span class="tech-tag">Chart.js</span>
+                    <span class="tech-tag">Vitest</span>
+                    <span class="tech-tag">Playwright</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Young Entrepreneur E-Negosyo System</div>
+                    <div class="project-date">March 2024</div>
+                </div>
+                <div class="project-desc">
+                    Full-stack e-commerce system for young entrepreneurs with comprehensive UI testing and debugging.
+                </div>
+                <ul class="project-points">
+                    <li>Developed product listings and order workflow features</li>
+                    <li>Validated UI flows and user interactions during development</li>
+                    <li>Performed comprehensive debugging and ensured smooth end-to-end functionality</li>
+                    <li>Tested database integration and data flow verification</li>
+                </ul>
+                <div class="tech-list">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Junior Web Developer Intern</div>
+                        <div class="experience-org">Internship</div>
+                    </div>
+                    <div class="experience-year">2023</div>
+                </div>
+                <div class="experience-desc">
+                    Assisted in UI development and debugging, gained foundational understanding of SDLC.
+                    Strengthened QA mindset through developer collaboration and hands-on testing experience.
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="two-column">
+                <div class="experience-item">
+                    <div class="experience-title">📊 Data Analytics Workshop</div>
+                    <div class="experience-org">Jobaaj Learnings</div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">💾 SQL Workshop</div>
+                    <div class="experience-org">Newton School</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
