@@ -6,43 +6,51 @@
 
 ## 📋 About
 
-Modern, dark-themed portfolio website showcasing QA engineering expertise, skills, projects, and experience. Built with clean HTML, CSS, and JavaScript for optimal performance and ATS optimization.
+Modern, dark-themed portfolio website showcasing QA engineering expertise, skills, projects, and experience. Built with clean HTML, CSS, and JavaScript, strictly adhering to **security best practices (CSP, HSTS)** and optimized for **performance** and **SEO**.
 
 ## ✨ Features
 
-- 🎨 Professional dark navy theme with cyan accents
-- 📱 Fully responsive design
-- 🐛 QA-specific branding and elements
-- 🎯 Interactive animations and effects
-- ⚡ Fast loading and optimized performance
-- 🔍 SEO optimized
-- ♿ Accessible and ATS-friendly
+- 🎨 **Modern UI/UX**: Professional dark navy theme with cyan accents & glassmorphism effects.
+- 📱 **Fully Responsive**: Mobile-first design with smart grid layouts for tools and skills.
+- ⚡ **High Performance**: Optimized assets, lightweight animations, and fast load times.
+- 🔒 **Security Hardened**:
+  - **CSP (Content Security Policy)** implemented.
+  - **HSTS (HTTP Strict Transport Security)** & **X-Frame-Options** configured.
+  - Secure external links (`rel="noopener noreferrer"`).
+- ♿ **Accessible**: Semantic HTML and ARIA labels.
+- 🐛 **QA Branding**: Custom bug hunter animations and testing-focused content.
 
 ## 🛠️ Technologies
 
-- HTML5
-- CSS3 (Flexbox, Grid, Animations)
-- Vanilla JavaScript
-- Google Fonts (Poppins, JetBrains Mono)
+- **Frontend**: HTML5, CSS3 (Flexbox/Grid/Variables), Vanilla JavaScript (ES6+)
+- **Fonts**: Poppins (Headings), JetBrains Mono (Code/Tech)
+- **Icons**: Font Awesome, Custom SVG Icons
+- **Deployment**: GitHub Pages (Custom Domain)
 
-## 🚀 Deployment
+## 🚀 Deployment & Security
 
-This portfolio is deployed on **GitHub Pages** and connected to the custom domain **muthtamilarasu.in** via GoDaddy.
+This portfolio is deployed on **GitHub Pages** with a custom domain **muthtamilarasu.in**.
 
-For deployment instructions, see [deployment_guide.md](deployment_guide.md)
+### Security Configuration
+The project includes a `_headers` file for standard static hosts (Netlify/Cloudflare) and meta tags for GitHub Pages to enforce security:
+- `Strict-Transport-Security` (1 year)
+- `X-Frame-Options: DENY`
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
 
 ## 📂 Project Structure
 
 ```
 qa-portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # Styling and animations
-├── script.js           # Interactive features
-├── robots.txt          # SEO - search engine directives
-├── sitemap.xml         # SEO - site structure
-├── assets/
-│   └── profile.jpg     # Profile photo
-└── README.md           # This file
+├── index.html          # Main application file (with CSP)
+├── styles.css          # Core styles & animations
+├── script.js           # Logic (Scroll reveal, Typing effect)
+├── resume.html         # Resume printable version
+├── _headers            # Security headers config
+├── robots.txt          # SEO directives
+├── sitemap.xml         # Site structure
+├── assets/             # Images & static resources
+└── README.md           # Documentation
 ```
 
 ## 👤 Contact
@@ -51,14 +59,6 @@ qa-portfolio/
 - 📧 Email: muthtamilarasu898@gmail.com
 - 💼 LinkedIn: [muthtamil-arasu-e](https://www.linkedin.com/in/muthtamil-arasu-e-38054b254/)
 - 🐙 GitHub: [muthtamilarasu](https://github.com/muthtamilarasu)
-- 🌐 Portfolio: [muthtamilarasu.in](https://muthtamilarasu.in)
-
-## 📊 Key Highlights
-
-- **Hard Skills for QA Engineers:** Bug database management, system specifications, test management, programming knowledge
-- **Technical Proficiencies:** Manual Testing (90%), Test Case Design (85%), SQL/Database Testing (75%), Automation Testing (60%)
-- **Tools & Technologies:** Selenium, Python, MySQL, Jira, Git, VS Code
-- **Status:** ✅ Open to Work | ✅ Open to Internship
 
 ## 📄 License
 
@@ -66,4 +66,4 @@ qa-portfolio/
 
 ---
 
-**Built with ❤️ for Quality Assurance**
+**Built with ❤️ and secure code for Quality Assurance**
