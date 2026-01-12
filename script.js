@@ -162,7 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
         window.requestAnimationFrame(step);
     }
 
-    // Trigger counter animation on scroll
+    // Trigger counter animation on scroll - DISABLED to prevent double animation conflict with CSS
+    /*
     const statItems = document.querySelectorAll('.stat-item[data-count]');
     let statsAnimated = false;
 
@@ -184,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+    */
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -214,21 +216,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
 
     // Elements to animate
-    const animateElements = document.querySelectorAll('.skill-card, .project-card-modern, .highlight-card, .timeline-item, .cert-item, .contact-info-card, .tool-circle');
+    const animateElements = document.querySelectorAll('.skill-group-card, .project-card-modern, .highlight-card, .timeline-item, .cert-item, .contact-details-panel, .contact-content');
 
     animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.classList.add('fade-in-up');
         observer.observe(el);
     });
+
+    // Timeline specific observer
+    const timeline = document.querySelector('.timeline');
+    if (timeline) {
+        observer.observe(timeline);
+    }
 
     // Add parallax effect to hero background
     window.addEventListener('scroll', () => {
@@ -242,6 +247,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (animatedBg && scrolled < window.innerHeight) {
             animatedBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        const progressBar = document.getElementById('scrollProgressBar');
+        if (progressBar) {
+            progressBar.style.width = scrolled + "%";
         }
     });
 
