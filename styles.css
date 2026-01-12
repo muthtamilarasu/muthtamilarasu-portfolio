@@ -2129,7 +2129,9 @@ p {
 
     /* Extra small screens */
     .container {
-        padding: 0 1.25rem;
+        padding: 0 1rem;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     /* Hero */
@@ -2156,13 +2158,15 @@ p {
     }
 
     .bug-icon {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
+        bottom: 10px;
+        right: 10px;
     }
 
     .bug-icon svg {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 
     /* Stats */
@@ -2197,12 +2201,10 @@ p {
 
     .tools-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 1rem;
         justify-items: center;
-        /* Center items in grid cells */
-        padding: 0;
-        /* precise control */
+        padding: 0.5rem;
     }
 
     .tool-emoji {
@@ -2226,8 +2228,11 @@ p {
 
     /* Contact */
     .lets-talk {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
+        /* Reduced to fit screen */
         letter-spacing: -1px;
+        word-break: break-word;
+        /* Prevent overflow */
     }
 
     .contact-pre {
