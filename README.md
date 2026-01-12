@@ -42,14 +42,16 @@ The project includes a `_headers` file for standard static hosts (Netlify/Cloudf
 
 ```
 qa-portfolio/
+├── css/
+│   └── styles.css      # Core styles & animations
+├── js/
+│   └── main.js         # Logic (Scroll reveal, Typing effect)
+├── assets/             # Images & static resources
 ├── index.html          # Main application file (with CSP)
-├── styles.css          # Core styles & animations
-├── script.js           # Logic (Scroll reveal, Typing effect)
 ├── resume.html         # Resume printable version
 ├── _headers            # Security headers config
 ├── robots.txt          # SEO directives
 ├── sitemap.xml         # Site structure
-├── assets/             # Images & static resources
 └── README.md           # Documentation
 ```
 
