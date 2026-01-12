@@ -2106,10 +2106,12 @@ p {
 
     /* Back to top */
     .back-to-top {
-        bottom: 1.5rem;
-        right: 1.5rem;
-        padding: 0.85rem 1.25rem;
-        font-size: 0.8rem;
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.75rem;
+        z-index: 1001;
+        /* Ensure above everything */
     }
 
     /* Section titles */
@@ -2239,8 +2241,15 @@ p {
         font-size: 0.9rem;
     }
 
+    .contact-details-panel {
+        max-width: 100%;
+        width: 100%;
+        padding: 1.5rem;
+        margin: 0 0 2rem;
+    }
+
     .contact-card-icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     /* Timeline */
